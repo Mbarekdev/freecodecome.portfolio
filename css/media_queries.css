@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+  body {
+    padding: 0 !important;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo {
+    margin-bottom: 1rem;
+  }
+  header #navbar a {
+    font-size: 1rem;
+  }
+  main #welcome-section {
+    padding: 10rem 1rem;
+  }
+  main #welcome-section h1 {
+    font-size: 1rem;
+  }
+  main #projects {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  main #projects h1 {
+    padding-top: 2rem;
+  }
+  main #Contact {
+    padding: 10rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=media_queries.css.map */

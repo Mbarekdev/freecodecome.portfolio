@@ -1,0 +1,42 @@
+@media screen and (max-width: 800px) {
+  body {
+    padding: 0 !important;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .logo {
+      margin-bottom: 1rem;
+    }
+
+    & #navbar a {
+      font-size: 1rem;
+    }
+  }
+
+  main {
+    & #welcome-section {
+      padding: 10rem 1rem;
+
+      & h1 {
+        font-size: 1rem;
+      }
+    }
+
+    & #projects {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      & h1 {
+        padding-top: 2rem;
+      }
+    }
+
+    & #Contact {
+      padding: 10rem 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

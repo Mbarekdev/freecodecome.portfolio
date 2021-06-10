@@ -1,0 +1,117 @@
+main {
+  & #welcome-section {
+    padding: 20rem 0;
+    text-align: center;
+    background-color: $sectionC;
+
+    & h1 {
+      font-size: 2rem;
+      font-family: $fontP;
+
+      & p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  & #projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    grid-gap: 20px;
+    & .project {
+      margin: 2rem;
+      width: 100%;
+      height: 440px;
+      border: 20px solid $sectionC;
+
+      img {
+        width: 100%;
+        height: 100%;
+        filter: blur(4px);
+      }
+
+      &:hover img {
+        cursor: pointer;
+        animation: sytleoff ease-in-out 0.5s alternate forwards;
+      }
+
+      & .text {
+        display: flex;
+        justify-content: space-between;
+        display: none;
+
+        & .project-title {
+          position: relative;
+          bottom: 69px;
+          z-index: 999;
+          left: -9px;
+          background: #f5f5a3;
+          padding: 1rem;
+          font-size: 0.6rem;
+        }
+        & a {
+          background-color: #000;
+          text-decoration: none;
+          color: #f5f5a3;
+          height: 30px;
+          height: 36px;
+          padding: 0.4rem;
+          text-transform: capitalize;
+          position: relative;
+          bottom: 50px;
+        }
+      }
+
+      &:hover .text {
+        animation: all ease-in-out 0.5s alternate forwards;
+        display: flex;
+      }
+    }
+  }
+
+  & #Contact {
+    padding: 20rem;
+    text-align: center;
+    background-color: $sectionC;
+    & a {
+      text-decoration: none;
+      margin: 0 2rem;
+      padding: 1rem;
+      color: #000;
+      font-family: $fontP;
+
+      &:hover {
+        animation: bckcolo 0.5s ease-in-out alternate forwards;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #f4f4f4;
+}
+
+@keyframes sytleoff {
+  from {
+    filter: blur(4px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes bckcolo {
+  from {
+    background-color: $sectionC;
+  }
+  to {
+    background-color: #000;
+    color: $sectionC;
+  }
+}
